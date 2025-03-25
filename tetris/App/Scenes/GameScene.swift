@@ -10,13 +10,18 @@ import SpriteKit
 final class GameScene: SKScene {
     // MARK: - Properties
 
+    private var lastUpdateTime: TimeInterval = 0
+    private var fallAccumulator: TimeInterval = 0
+    private var currentFallSpeed: TimeInterval {
+        max(0.05, 0.5 * pow(0.9, Double(level - 1)))
+    }
+
     var originX: CGFloat = 0
     var originY: CGFloat = 0
     var blockSize: CGFloat = 0
     var gameArray: [[SKSpriteNode?]] = []
     var currentTetromino: Tetromino?
     var currentBlocks: [SKSpriteNode] = []
-    var fallTimer: Timer?
     var score = 0
     var level = 1
     var linesCleared = 0
@@ -41,8 +46,28 @@ final class GameScene: SKScene {
         setupGrid()
         setupLabels()
         spawnNewTetromino()
-        startFallTimer()
         setupSwipeGestures(in: view)
+    }
+
+    // MARK: - Game Loop
+
+    override func update(_ currentTime: TimeInterval) {
+        if lastUpdateTime == 0 {
+            lastUpdateTime = currentTime
+
+            return
+        }
+
+        let deltaTime = currentTime - lastUpdateTime
+        lastUpdateTime = currentTime
+
+        fallAccumulator += deltaTime
+
+        if fallAccumulator >= currentFallSpeed {
+            fallAccumulator = 0
+
+            moveTetrominoDown()
+        }
     }
 
     // MARK: - UITouch
@@ -157,7 +182,6 @@ private extension GameScene {
 
         if newLevel > level {
             level = newLevel
-            startFallTimer()
             showLevelUpEffect()
         }
 
@@ -182,16 +206,6 @@ private extension GameScene {
 
         drawCurrentTetromino()
         drawNextTetrominoPreview()
-    }
-
-    func startFallTimer() {
-        fallTimer?.invalidate()
-
-        let fallSpeed = max(0.05, 0.5 * pow(0.9, Double(level - 1)))
-
-        fallTimer = Timer.scheduledTimer(withTimeInterval: fallSpeed, repeats: true) { [weak self] _ in
-            self?.moveTetrominoDown()
-        }
     }
 
     func setupSwipeGestures(in view: SKView) {
@@ -221,6 +235,8 @@ private extension GameScene {
         }
     }
 }
+
+// MARK: - Drawing & Game Logic
 
 private extension GameScene {
     func drawCurrentTetromino() {
@@ -463,7 +479,6 @@ private extension GameScene {
         if linesRemoved > 0 {
             for row in rowsToRemove.sorted(by: >) {
                 animateLineRemoval(at: row)
-
                 removeLine(at: row)
             }
 
@@ -486,9 +501,6 @@ private extension GameScene {
     }
 
     func gameOver() {
-        fallTimer?.invalidate()
-        fallTimer = nil
-
         let overlay = SKShapeNode(rect: CGRect(origin: .zero, size: size))
         overlay.fillColor = .black
         overlay.alpha = 0.6

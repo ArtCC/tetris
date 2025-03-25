@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8000FD5D2D92F72E00AA4D98 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8000FD522D92F72E00AA4D98 /* Actions.sks */; };
 		8000FD5E2D92F72E00AA4D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8000FD542D92F72E00AA4D98 /* Assets.xcassets */; };
-		8000FD5F2D92F72E00AA4D98 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8000FD552D92F72E00AA4D98 /* GameScene.sks */; };
 		8000FD602D92F72E00AA4D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8000FD592D92F72E00AA4D98 /* LaunchScreen.storyboard */; };
 		8000FD612D92F72E00AA4D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8000FD5B2D92F72E00AA4D98 /* Main.storyboard */; };
 		8000FD622D92F72E00AA4D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000FD532D92F72E00AA4D98 /* AppDelegate.swift */; };
 		8000FD632D92F72E00AA4D98 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000FD562D92F72E00AA4D98 /* GameScene.swift */; };
 		8000FD642D92F72E00AA4D98 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000FD572D92F72E00AA4D98 /* GameViewController.swift */; };
+		800A144F2D92FB1B00214747 /* TetrominoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A144E2D92FB1B00214747 /* TetrominoFactory.swift */; };
+		800A14532D92FB5A00214747 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 800A14522D92FB5A00214747 /* Localizable.xcstrings */; };
+		800A14592D92FE2F00214747 /* Tetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A14582D92FE2F00214747 /* Tetromino.swift */; };
+		800A145B2D93005B00214747 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A145A2D93005B00214747 /* StartScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8000FD382D92F70900AA4D98 /* tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8000FD522D92F72E00AA4D98 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		8000FD532D92F72E00AA4D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8000FD542D92F72E00AA4D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8000FD552D92F72E00AA4D98 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		8000FD562D92F72E00AA4D98 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8000FD572D92F72E00AA4D98 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8000FD582D92F72E00AA4D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8000FD5A2D92F72E00AA4D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		800A144E2D92FB1B00214747 /* TetrominoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrominoFactory.swift; sourceTree = "<group>"; };
+		800A14522D92FB5A00214747 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		800A14582D92FE2F00214747 /* Tetromino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tetromino.swift; sourceTree = "<group>"; };
+		800A145A2D93005B00214747 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,16 +63,66 @@
 		8000FD5C2D92F72E00AA4D98 /* tetris */ = {
 			isa = PBXGroup;
 			children = (
-				8000FD522D92F72E00AA4D98 /* Actions.sks */,
-				8000FD532D92F72E00AA4D98 /* AppDelegate.swift */,
-				8000FD542D92F72E00AA4D98 /* Assets.xcassets */,
-				8000FD552D92F72E00AA4D98 /* GameScene.sks */,
-				8000FD562D92F72E00AA4D98 /* GameScene.swift */,
-				8000FD572D92F72E00AA4D98 /* GameViewController.swift */,
+				800A14542D92FB6400214747 /* App */,
+				800A14512D92FB4F00214747 /* Resources */,
+				800A14502D92FB4900214747 /* UI */,
+			);
+			path = tetris;
+			sourceTree = "<group>";
+		};
+		800A14502D92FB4900214747 /* UI */ = {
+			isa = PBXGroup;
+			children = (
 				8000FD592D92F72E00AA4D98 /* LaunchScreen.storyboard */,
 				8000FD5B2D92F72E00AA4D98 /* Main.storyboard */,
 			);
-			path = tetris;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		800A14512D92FB4F00214747 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8000FD542D92F72E00AA4D98 /* Assets.xcassets */,
+				800A14522D92FB5A00214747 /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		800A14542D92FB6400214747 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8000FD532D92F72E00AA4D98 /* AppDelegate.swift */,
+				800A14562D92FB8400214747 /* Manager */,
+				800A14572D92FE2900214747 /* Models */,
+				800A14552D92FB6F00214747 /* Scenes */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		800A14552D92FB6F00214747 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8000FD562D92F72E00AA4D98 /* GameScene.swift */,
+				8000FD572D92F72E00AA4D98 /* GameViewController.swift */,
+				800A145A2D93005B00214747 /* StartScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		800A14562D92FB8400214747 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				800A144E2D92FB1B00214747 /* TetrominoFactory.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		800A14572D92FE2900214747 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				800A14582D92FE2F00214747 /* Tetromino.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +168,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 8000FD2F2D92F70900AA4D98;
 			minimizedProjectReferenceProxies = 1;
@@ -132,10 +187,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8000FD5D2D92F72E00AA4D98 /* Actions.sks in Resources */,
 				8000FD5E2D92F72E00AA4D98 /* Assets.xcassets in Resources */,
-				8000FD5F2D92F72E00AA4D98 /* GameScene.sks in Resources */,
 				8000FD602D92F72E00AA4D98 /* LaunchScreen.storyboard in Resources */,
+				800A14532D92FB5A00214747 /* Localizable.xcstrings in Resources */,
 				8000FD612D92F72E00AA4D98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,8 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8000FD622D92F72E00AA4D98 /* AppDelegate.swift in Sources */,
+				800A145B2D93005B00214747 /* StartScene.swift in Sources */,
 				8000FD632D92F72E00AA4D98 /* GameScene.swift in Sources */,
+				800A144F2D92FB1B00214747 /* TetrominoFactory.swift in Sources */,
 				8000FD642D92F72E00AA4D98 /* GameViewController.swift in Sources */,
+				800A14592D92FE2F00214747 /* Tetromino.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +291,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -290,6 +348,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

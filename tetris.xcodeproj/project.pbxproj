@@ -17,6 +17,11 @@
 		800A14532D92FB5A00214747 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 800A14522D92FB5A00214747 /* Localizable.xcstrings */; };
 		800A14592D92FE2F00214747 /* Tetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A14582D92FE2F00214747 /* Tetromino.swift */; };
 		800A145B2D93005B00214747 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A145A2D93005B00214747 /* StartScene.swift */; };
+		8072CFCF2D93EF4E007DB065 /* ActiveTetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072CFCE2D93EF4E007DB065 /* ActiveTetromino.swift */; };
+		8072CFD22D93F4A0007DB065 /* GameHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072CFD12D93F4A0007DB065 /* GameHUD.swift */; };
+		8072CFD42D93F56E007DB065 /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072CFD32D93F56E007DB065 /* GameStats.swift */; };
+		8072CFD62D93F674007DB065 /* NextPiecePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072CFD52D93F674007DB065 /* NextPiecePreview.swift */; };
+		8072CFD82D93F927007DB065 /* GameOverOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072CFD72D93F927007DB065 /* GameOverOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		800A14522D92FB5A00214747 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		800A14582D92FE2F00214747 /* Tetromino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tetromino.swift; sourceTree = "<group>"; };
 		800A145A2D93005B00214747 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		8072CFCE2D93EF4E007DB065 /* ActiveTetromino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTetromino.swift; sourceTree = "<group>"; };
+		8072CFD12D93F4A0007DB065 /* GameHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHUD.swift; sourceTree = "<group>"; };
+		8072CFD32D93F56E007DB065 /* GameStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
+		8072CFD52D93F674007DB065 /* NextPiecePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPiecePreview.swift; sourceTree = "<group>"; };
+		8072CFD72D93F927007DB065 /* GameOverOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,7 @@
 				8000FD532D92F72E00AA4D98 /* AppDelegate.swift */,
 				800A14562D92FB8400214747 /* Manager */,
 				800A14572D92FE2900214747 /* Models */,
+				8072CFD02D93F48D007DB065 /* Nodes */,
 				800A14552D92FB6F00214747 /* Scenes */,
 			);
 			path = App;
@@ -112,6 +123,7 @@
 		800A14562D92FB8400214747 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				8072CFD32D93F56E007DB065 /* GameStats.swift */,
 				800A144E2D92FB1B00214747 /* TetrominoFactory.swift */,
 			);
 			path = Manager;
@@ -123,6 +135,17 @@
 				800A14582D92FE2F00214747 /* Tetromino.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8072CFD02D93F48D007DB065 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				8072CFCE2D93EF4E007DB065 /* ActiveTetromino.swift */,
+				8072CFD12D93F4A0007DB065 /* GameHUD.swift */,
+				8072CFD72D93F927007DB065 /* GameOverOverlay.swift */,
+				8072CFD52D93F674007DB065 /* NextPiecePreview.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +224,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8072CFD82D93F927007DB065 /* GameOverOverlay.swift in Sources */,
 				8000FD622D92F72E00AA4D98 /* AppDelegate.swift in Sources */,
 				800A145B2D93005B00214747 /* StartScene.swift in Sources */,
+				8072CFD42D93F56E007DB065 /* GameStats.swift in Sources */,
 				8000FD632D92F72E00AA4D98 /* GameScene.swift in Sources */,
+				8072CFD62D93F674007DB065 /* NextPiecePreview.swift in Sources */,
+				8072CFD22D93F4A0007DB065 /* GameHUD.swift in Sources */,
+				8072CFCF2D93EF4E007DB065 /* ActiveTetromino.swift in Sources */,
 				800A144F2D92FB1B00214747 /* TetrominoFactory.swift in Sources */,
 				8000FD642D92F72E00AA4D98 /* GameViewController.swift in Sources */,
 				800A14592D92FE2F00214747 /* Tetromino.swift in Sources */,
